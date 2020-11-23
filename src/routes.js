@@ -6,7 +6,7 @@ import pages from './pages';
 
 function FourOhFour({ location }) {
 	return (
-		<div>
+		<div className="not-found">
 			<h3>
 				No match for <code>{location.pathname}</code>
 			</h3>
