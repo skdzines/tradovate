@@ -1,0 +1,13 @@
+button {
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    background-color: #2e9af7;
+    padding: 1rem;
+    font-size: 1.6rem;
+    min-width: 10rem;
+    cursor: pointer;
+    &.secondary {
+        background-color: #ccc;
+    }
+}

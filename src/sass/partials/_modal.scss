@@ -1,0 +1,79 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+	opacity: .6;
+	z-index: 1000;
+	animation-name: overlayIn;
+	animation-duration: 1s;
+	&.close-modal {
+		animation-name: overlayOut;
+		animation-fill-mode: forwards;
+	}
+}
+.modal {
+	display: flex;
+    flex-direction: column;
+	position: fixed;
+	z-index: 1001;
+	background-color: #fff;
+	max-width: 40rem;
+	max-height: 60rem;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+    text-align: center;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, .35);
+	border-top: none;
+	animation-name: modalSlideDown;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	.close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		width: 1.5rem;
+		height: 1.5rem;
+		z-index: 2;
+	}
+	&.close-modal {
+		animation-name: modalSlideOut;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in;
+	}
+	.content {
+		width: 100%;
+		position: relative;
+        padding: 2rem;
+        font-size: 1.6rem;
+        .controls {
+            padding: 1rem;
+            margin-top: 1rem;
+            border-top: 1px solid $secondaryColor;
+            display: flex;
+            justify-content: space-evenly;
+            button {
+                font-size: 1.6rem;
+                padding: 1rem 2rem;
+            }
+        }
+	}
+	h1 {
+		font-size: 1.6rem;
+		margin-bottom: 0;
+		color: #fff;
+		background-color: $primaryColor;
+		padding: 1.2rem 1rem 1rem;
+		z-index: 1;
+        text-align: left;
+        font-weight: bold;
+	}
+}

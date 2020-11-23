@@ -1,0 +1,53 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes overlayIn{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: .6;
+	}
+}
+
+@keyframes overlayOut{
+	0% {
+		opacity: .6;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes modalSlideDown {
+	0% {
+		top: -70%;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes modalSlideOut {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -70%;
+	}
+}

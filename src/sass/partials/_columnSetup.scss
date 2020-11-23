@@ -1,0 +1,88 @@
+.column-setup {
+    background-color: $primaryColor;
+    position: absolute;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 70rem;
+    max-height: 70rem;
+    h1 {
+        font-size: 1.8rem;
+        span {
+            font-size: 70%;
+            display: block;
+        }
+    }
+    h2 {
+        font-size: 1.4rem;
+        color: #b5b5b5;
+    }
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 1.5rem;
+        opacity: .5;
+    }
+    section {
+        &.columns {
+            display: flex;
+            justify-content: space-between;
+            > * {
+                width: 48%;
+                position: relative;
+            }
+            ul {
+                overflow: hidden;
+                overflow-y: auto;
+                font-size: 1.6rem;
+                height: 100%;
+                li {
+                    padding: 1.7rem 2rem 1.3rem 3rem;
+                    margin-right: 2rem;
+                    line-height: 1;
+                    &:hover {
+                        background-color: rgba(109, 109, 109, 0.5);
+                    }
+                    &.locked, &.dragging {
+                        opacity: .5;
+                    }
+                    &.locked {
+                        background-image: url('/images/lock-icon.png');
+                        background-position: 0.4rem center;
+                        background-size: 2rem;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            .available {
+                border-right: 1px dashed #6b6b6b;
+                li {
+                    &:hover {
+                        background-image: url('/images/hamburger-icon.png');
+                        background-position: .8rem center;
+                        background-size: 1.2rem;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            &:not(.headings) {
+                height: 73%;
+            }
+            &.headings {
+                margin: 4rem 0 1rem;
+            }
+        }
+        &.ctas {
+            display: flex;
+            padding: 3rem 0 0;
+            button {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
